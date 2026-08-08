@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Account Management</title>
+        <link rel="stylesheet" href="style_account.css">
+        <script src="https://kit.fontawesome.com/91d1ad08da.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!---TOPBAR MENU-->
+        <header class="topbar">
+            <a href="../client/index.html"><img class="img-logo" src="../img/TBZ_Logo_Rev2.0 Clear.png" alt="TBZ Logo"></a>
+            <h1>Hi! <span id="display-name-header">User</span></h1>
+            <div class="user-menu-container">
+
+                <button class="avatar-btn" id="avatar-btn" aria-expanded="false" title="Account Menu">J</button>
+
+                <div class="dropdown-menu" id="user-dropdown">
+                    <div class="dropdown-header">
+                        <h3 id="display-name-dropdown">User Name</h3>
+                        <p id="display-email-dropdown">user@example.com</p>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">👤 Account Settings</a></li>
+                        <li><a href="#" class="logout-btn" onclick="logoutUser()">🚪 Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+         <!---TOPBAR MENU-->
+        <main class="main-container">
+            <div class="content-header">
+                <h1>My Bookings</h1>
+                <p>Manage your upcoming and past reservations.</p>
+            </div>
+
+            <!--TABS CONTAINER-->
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('cars')">Car Rentals</button>
+                <button class="tab-btn" onclick="switchTab('staycation')">Staycations</button>
+            </div>
+
+            <div class="tab-content active" id="cars">
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Vehicle</th>
+                                <th>Downpayment (if any)</th>
+                                <th>Total Payment</th>
+                                <th>With/Without Driver</th>
+                                <th>Destination From</th>
+                                <th>Destination to</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th># of Days</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="cars-table-body">
+                            <tr><td colspan="11" style="text-align: center;">Loading data...</td></tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="tab-content" id="staycation">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Renter ID</th>
+                                <th>Downpayment (If any)</th>
+                                <th>Total Payment</th>
+                                <th>Long Term</th>
+                                <th>Rental Start Date</th>
+                                <th>Rental End Date</th>
+                                <th># of Days</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stays-table-body">
+                            <tr><td colspan="6" style="text-align: center;">Loading data...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        
+
+        
+        <!--FOOTER CONTAINER-->
+
+        <footer class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img class="footer-logo" src="../img/TBZ_Logo_Short Cropped.png" alt="TBZ Logo Short">
+                    <p>TBZ Car Rental On the Go!</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Vehicle Lease Agreement</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Staycation</a></li>
+                        </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Payment Method</h3>
+                        <div class="payment-method-img">
+                                                                                       <!--TODO: CHANGE .PNG TO FONTAWSOME-->
+                            <img src="../img/お金.png" alt="Cash Image">
+                            <img src="../img/gcash.png" alt="GCash Image">
+                            <img src="../img/mobile-banking.png" alt="Bank Image">
+                        </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Follow Us on Facebook!</h3>
+                    <a href="https://www.facebook.com/tbz.car.rental" target="_blank" class="social-link">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </div>
+            </div>
+           
+            <div class="footer-bottom">
+                <p>&copy; 2026 TBZ Car Rental. All Rights Reserved.</p>
+            </div>
+
+        </footer>
+
+        <!-- NEW: REUSABLE MODAL (Popup Box) -->
+        <div class="modal-overlay" id="user-modal">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <h2 id="modal-title">Action</h2>
+                    <button class="close-modal" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Dynamic form injected by JS goes here -->
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="script_account.js"></script>
+</html>

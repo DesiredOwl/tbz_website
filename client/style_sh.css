@@ -1,0 +1,315 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(#000000, #1b1464);
+    color: #1e293b;
+    padding: 40px 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/*---------------NAVIGATION BAR------------*/
+
+.navigation-bar{
+    outline: 4px solid #ffff ;
+    display: flex;
+    align-items: center;           
+    background: #1b1464;
+    padding: 4px 8px;
+    font-family: sans-serif;
+}
+
+.img-logo{
+    max-width: 90px;
+}
+
+.navlinks {
+    text-decoration: none;
+    margin-left: auto; 
+    margin-right: auto;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navlinks li {
+    padding: 0 8px;
+}
+
+.navlinks li a{
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.navigation-bar-login-container {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.login-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.login-link:hover {
+    background-color: #fff;
+    color: #1b1464;
+}
+
+/*--------------SHOWROOM-HEADER-----------------*/
+
+.showroom-header{
+    padding-top: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.showroom-header h2{
+    color: #ffff;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.showroom-header p{
+    color: #fe1103;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/*------------CAR CONTAINER---------------*/
+
+.car-container{
+    display: grid;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    background-color: rgb(30, 65, 141);
+    padding: 50px;
+    margin-bottom: 50px;
+    outline: 2px dashed white;
+    border-radius: 16px;
+}
+
+.car-card{
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden; /* Keeps the image inside the rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #fe1103;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.car-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.car-info{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.car-info h3{
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #0f172a;
+}
+
+/*------------SPECS BADGES--------------*/
+
+.specs {
+    margin-bottom: 20px;
+}
+
+.spec-badge{
+    background-color: #f1f5f9;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/*-----------------CARD FOOTER------------*/
+
+.card-footer{
+    margin-top: auto;
+    border-top: 4px solid #e2e8f0;
+    padding-top: 20px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #10b981; /* Premium Green */
+    margin: 0 0 15px 0;
+}
+
+.price span {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: normal;
+}
+
+.book-now-btn{
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transition: all 0.2s ease;
+}
+
+.book-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+        
+.book-now-btn:active {
+    transform: translateY(2px);
+}
+
+/*--------------FOOTER CONTAINER---------------*/
+
+.footer-container{
+    background-color: #1b1464;
+    color: #e2e8f0; 
+    padding: 60px 20px 20px;
+    border-top: 4px solid #3b82f6; 
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.footer-col h3{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-col h3::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background-color: #3b82f6;
+}
+
+.footer-col p{
+    line-height: 1.6;
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.footer-col ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li{
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a{
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-col ul li a:hover{
+    color: #00c6ff;
+    transform: translateX(5px);
+}
+
+.payment-method-img,
+.social-logo{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px dashed rgba(255,255,255,0.3);
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.payment-method-img img{
+    max-width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.social-link{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-link i{
+    font-size: 40px;
+    color: #cbd5e1;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i{
+    color: #1877F2;
+    transform: scale(1.1) translateY(-3px); /* Slightly enlarges and lifts the icon */
+    text-shadow: 0 4px 10px rgba(24, 119, 242, 0.4); /* Adds a soft blue glow */
+}
+
+.footer-logo{
+    max-width: 70%;
+    outline: 1px solid beige;
+    object-fit: cover;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle dividing line */
+    font-size: 0.9rem;
+    color: #94a3b8;
+}

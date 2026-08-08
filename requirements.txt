@@ -1,0 +1,38 @@
+pip install flask mysql-connector-python
+pip install flask-cors
+pip install flask-jwt-extended
+
+
+tbz_backend/
+│
+├── requirements.txt         # List of Python packages to install
+├── app.py                   # The main entry point that starts the server
+│
+├── config/                  # Configuration settings
+│   └── db.py                # Database connection logic
+│
+└── routes/                  # All your API endpoints
+    ├── __init__.py          # Makes 'routes' a Python package
+    ├── auth.py              # Routes for Login/Register
+    ├── cars.py              # Routes for Car inventory
+    └── bookings.py          # Routes for Bookings
+
+
+
+
+
+TBZ Website Project/
+├── backend/
+│   ├── app.py              # Flask entry point
+│   ├── requirements.txt    # list dependencies (pip freeze > requirements.txt)
+│   └── db/                 # database scripts (move db.sql here)
+├── frontend/               # (rename from 'client')
+│   ├── templates/          # .html files
+│   ├── static/             # .css, .js, images
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── img/            # move all images here
+├── tests/                  # your test files
+├── .gitignore
+├── .venv/                  # (virtual environment, ignored)
+└── readme.md

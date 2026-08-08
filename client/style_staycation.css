@@ -1,0 +1,422 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient( #1b1464,#0d93c4, #8f1913, #1b1464);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/*---------------NAVIGATION BAR------------*/
+
+.navigation-bar{
+    outline: 4px solid #007bff ;
+    display: flex;
+    align-items: center;           
+    background: #1b1464;
+    padding: 4px 8px;
+    font-family: sans-serif;
+}
+
+.img-logo{
+    max-width: 90px;
+}
+
+.navlinks {
+    text-decoration: none;
+    margin-left: auto; 
+    margin-right: auto;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navlinks li {
+    padding: 0 8px;
+}
+
+.navlinks li a{
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.navigation-bar-login-container {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.login-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.login-link:hover {
+    background-color: #fff;
+    color: #1b1464;
+}
+
+/*--------------BOOKING CONTAINER--------*/
+
+.booking-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.header-section{
+    margin-bottom: 30px;
+}
+
+.header-section h1{
+    color: #1b1464;
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+}
+
+.header-section p{
+    color: #64748b;
+    font-size: 1.1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/*------------CONTENT GRID-------------------*/
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    align-items: start
+}
+
+.main-img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.thumbs-row{
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    margin-bottom: 40px;
+    scroll-behavior: smooth; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin;
+}
+
+/*------------webkits-----------------------*/
+
+.thumbnail-row::-webkit-scrollbar {
+    height: 8px;
+}
+.thumbnail-row::-webkit-scrollbar-track {
+    background: #f1f5f9; 
+    border-radius: 10px;
+}
+.thumbnail-row::-webkit-scrollbar-thumb {
+    background: #cbd5e1; 
+    border-radius: 10px;
+}
+.thumbnail-row::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; 
+}
+
+.thumbnail{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.thumbnail:hover, .thumbnail.active{
+    opacity: 1;
+    border-color: #3b82f6;
+}
+
+/*--------------SECTION TITLES--------------------------*/
+
+.section-title{
+    color: #0f172a;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fe1103;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.amenity-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.amenity-icon{
+    font-size: 24px;
+    background: #f1f5f9;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/*------------------BOOKING CONTAIER---------------------*/
+
+.booking-card{
+    background: linear-gradient(125deg, #1b1464,#0d93c4, #1b1464);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.20);
+    position: sticky;
+    top: 20px; 
+}
+
+.price{
+    font-size: 2rem;
+    color: #02ffab;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+.price span{
+    font-size: 1rem;
+    color: white;
+    font-weight: normal;
+}
+
+/*--------------------INPUT/DATE/GUEST---------------------------------*/
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.input-group label{
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+}
+
+input[type="date"], select{
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #334155;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="date"]:focus, select:focus{
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+/*-------------------BTN TRANSITION COLOURS--------------------*/
+
+@property --gradient-start {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #1b1464;
+}
+
+@property --gradient-mid {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #fe1103;
+}
+
+@property --gradient-end {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #1b1464;
+}
+
+/*------------------BOOK BTN------------------------------------*/
+
+.book-btn{
+    background: linear-gradient(100deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s, --gradient-start 0.5s ease,--gradient-mid 0.5s ease ,--gradient-end 0.5s ease;
+    margin-top: 10px;
+}
+
+.book-btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+    --gradient-start: #fe1103;
+    --gradient-mid: #1b1464;
+    --gradient-end: #fe1103;
+}
+
+/*-----------------PHONE SETTINGS--------------------------*/
+
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Stacks the booking card underneath the gallery on mobile */
+    }
+            
+    .booking-card {
+        position: static; /* Removes sticky behavior on mobile so it scrolls normally */
+    }
+}
+
+/*--------------FOOTER CONTAINER---------------*/
+
+.footer-container{
+    background-color: #1b1464;
+    color: #e2e8f0; 
+    padding: 60px 20px 20px;
+    border-top: 4px solid #3b82f6; 
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.footer-col h3{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-col h3::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background-color: #3b82f6;
+}
+
+.footer-col p{
+    line-height: 1.6;
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.footer-col ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li{
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a{
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-col ul li a:hover{
+    color: #00c6ff;
+    transform: translateX(5px);
+}
+
+.payment-method-img,
+.social-logo{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px dashed rgba(255,255,255,0.3);
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.payment-method-img img{
+    max-width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.social-link{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-link i{
+    font-size: 40px;
+    color: #cbd5e1;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i{
+    color: #1877F2;
+    transform: scale(1.1) translateY(-3px); /* Slightly enlarges and lifts the icon */
+    text-shadow: 0 4px 10px rgba(24, 119, 242, 0.4); /* Adds a soft blue glow */
+}
+
+.footer-logo{
+    max-width: 70%;
+    outline: 1px solid beige;
+    object-fit: cover;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle dividing line */
+    font-size: 0.9rem;
+    color: #94a3b8;
+}

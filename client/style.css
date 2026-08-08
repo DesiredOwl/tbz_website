@@ -1,0 +1,523 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient( #1b1464,#0d93c4, #8f1913, #1b1464);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/*---------------NAVIGATION BAR------------*/
+
+.navigation-bar{
+    outline: 4px solid #007bff ;
+    display: flex;
+    align-items: center;           
+    background: #1b1464;
+    padding: 4px 8px;
+    font-family: sans-serif;
+}
+
+.img-logo{
+    max-width: 90px;
+}
+
+.navlinks {
+    text-decoration: none;
+    margin-left: auto; 
+    margin-right: auto;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navlinks li {
+    padding: 0 8px;
+}
+
+.navlinks li a{
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.navigation-bar-login-container {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.login-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.login-link:hover {
+    background-color: #fff;
+    color: #1b1464;
+}
+
+/* --------------SLIDESHOW CONTAINER-------------------- */
+
+.slideshow-container{
+    border: 2px solid #fff;
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid white;
+}
+
+.slideshow-group{
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: slideShow 12s infinite;
+}
+
+.slideshow-group img{
+    width: 33.333%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slideShow{
+    0%, 28% {transform: translateX(0);}
+    33%, 61% {transform: translateX(-33.333%);}
+    66%, 95% {transform: translate(-66.666%);}
+    100% {transform: translateX(0);}
+}
+
+/*----------MAIN CONTAINER------------------------*/
+
+.main-container{
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    background-color: rgb(30, 65, 141);
+    overflow: auto; 
+    border-radius: 8px;
+}
+
+.main-container h1{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 46px;
+    font-style: italic;
+    margin: 0;
+}
+
+#p-fade{
+    text-align: center;
+}
+
+#p-fade{
+    opacity: 0;
+    animation: fadeInOut 4s ease-in-out 1.0s forwards;
+}
+
+.welcome-text{
+    opacity: 0;
+    animation: fadeInOut 4s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeInOut{
+    0%{opacity: 0;}
+    25%{opacity: 1;}
+    75%{opacity: 1;}
+    100%{opacity: 1;}
+}
+
+.booking-setup{
+    display: flex;
+    justify-content: center;
+}
+
+.booking-setup button{
+    padding: 10px 20px;
+    font-size: 16px;   
+}
+
+/*------------Grid Img View-----------------*/
+
+.grid-view-container{
+    display: grid;
+    background-color: rgb(30, 65, 141);
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    .grid-view-container{
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 250px;
+    }
+
+    .grid-view-container .grid-view-items:nth-child(3){
+        grid-column: 2/3;
+        grid-row: 1 / span 2;
+    }
+}
+
+.grid-view-items{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.overlay-text .p-opacity{
+    opacity: 0;
+    transform: translateY(10px); 
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out
+}
+
+.grid-view-items:hover .overlay-text .p-opacity{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid-view-items > img,
+.grid-view-items > .overlay-text{
+    grid-area: 1/1;
+}
+
+.grid-view-items > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-view-items > .overlay-text{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: #ffffff;
+    padding: 30px;
+
+    /* Use flexbox or grid alignment properties to position text inside the overlay cell */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+  
+    z-index: 2; /* Ensures text stays structural on top */
+}
+
+.grid-view-items:hover > img{
+    transform: scale(1.05);
+}
+
+/*----------GRID MORE CONTAINER------------*/
+
+#grid-more-header{
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-left: 20px;
+}
+
+.grid-more-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-items-more{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    max-width: 1200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-items-more:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.grid-img-more{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.grid-text-more{
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.grid-text-more h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1b1464;
+    font-size: 1.5rem;
+}
+
+.p-more{
+    margin: 0;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/*---------------SERVICES CONTAINER-----------------*/
+.services-container{
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.services-container h2{
+    color: #ffff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.services-subtitle{
+    color: #ffff;
+    margin-bottom: 40px;
+}
+
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.services-card{
+    background-color: #ffff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.services-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.services-icon{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.services-card h3{
+    color: #0f172a;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.services-card p{
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*--------------CONTACT CONTAINER-----------*/
+.contact-container{
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #0f172a;
+}
+
+.contact-header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-header h2{
+    padding-top: 20px;
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contact-header p{
+    color: white;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.contact-card{
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    /* A neat trick to make emojis look like branded icons */
+    filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+
+.contact-card h3{
+    color: #ffff;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contact-card p, 
+.contact-card a {
+    color: #ffff;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+    text-decoration: none; /* Removes the underline from links */
+    transition: color 0.2s;
+}
+
+/*--------------FOOTER CONTAINER---------------*/
+
+.footer-container{
+    background-color: #1b1464;
+    color: #e2e8f0; 
+    padding: 60px 20px 20px;
+    border-top: 4px solid #3b82f6; 
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.footer-col h3{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-col h3::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background-color: #3b82f6;
+}
+
+.footer-col p{
+    line-height: 1.6;
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.footer-col ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li{
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a{
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-col ul li a:hover{
+    color: #00c6ff;
+    transform: translateX(5px);
+}
+
+.payment-method-img,
+.social-logo{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px dashed rgba(255,255,255,0.3);
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.payment-method-img img{
+    max-width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.social-link{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-link i{
+    font-size: 40px;
+    color: #cbd5e1;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i{
+    color: #1877F2;
+    transform: scale(1.1) translateY(-3px); /* Slightly enlarges and lifts the icon */
+    text-shadow: 0 4px 10px rgba(24, 119, 242, 0.4); /* Adds a soft blue glow */
+}
+
+.footer-logo{
+    max-width: 70%;
+    outline: 1px solid beige;
+    object-fit: cover;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle dividing line */
+    font-size: 0.9rem;
+    color: #94a3b8;
+}

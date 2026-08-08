@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>TBZ Admin Panel</title>
+        <link rel="stylesheet" href="style_new.css">
+        <script src="https://kit.fontawesome.com/91d1ad08da.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!---TOPBAR MENU-->
+        <header class="topbar">
+            <div class="topbar-left">
+                <a href="../client/index.html"><img class="img-logo" src="../img/TBZ_Logo_Rev2.0 Clear.png" alt="TBZ Logo"></a>
+                <h1>TBZ Admin Panel</h1>
+            </div>
+            <div class="user-menu-container">
+
+                <button class="avatar-btn" id="avatar-btn" aria-expanded="false" title="Account Menu">A</button>
+
+                <div class="dropdown-menu" id="user-dropdown">
+                    <div class="dropdown-header">
+                        <h3>Juan Dela Cruz</h3>
+                        <p>juan@example.com</p>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">System Settings</a></li>
+                        <li><a href="../client/login.html" class="logout-btn">🚪 Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <div class="content-header">
+                <h1>Website Control Panel</h1>
+                <p>Oversee reservations, handle receipts, and manage users.</p>
+            </div>
+
+            <!--TABS CONTAINER-->
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('cars')">Car Rentals</button>
+                <button class="tab-btn" onclick="switchTab('staycation')">Staycations</button>
+                <button class="tab-btn" onclick="switchTab('users')">Users</button>
+            </div>
+
+            <div class="tab-content active" id="cars">
+
+                <div class="admin-toolbar">
+                    <button class="btn btn-primary" onclick="openModal('Add New Car Booking')"><i class="fas fa-plus"></i> New Booking</button>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>User</th>
+                                <th>Vehicle</th>
+                                <th>Pick-up & Return</th>
+                                <th>Status</th>
+                                <th style="text-align: right;">Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="cars-table-body">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="tab-content" id="staycation">
+
+                <div class="admin-toolbar">
+                    <button class="btn btn-primary" onclick="openModal('Add Staycation Booking')"><i class="fas fa-plus"></i> New Booking</button>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                               <th>Booking ID</th>
+                                <th>User</th>
+                                <th>Suite</th>
+                                <th>Dates</th>
+                                <th>Status</th>
+                                <th style="text-align: right;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stays-table-body">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tab-content" id="users">
+
+                <div class="admin-toolbar">
+                    <button class="btn btn-success" onclick="exportData()"><i class="fas fa-file-csv"></i> Export to CSV</button>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th style="text-align: right;">Action</th>
+                            </tr>
+                        </thead>
+                         <tbody id="users-table-body">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+        </main>
+        
+
+        
+        <!--FOOTER CONTAINER-->
+
+        <footer class="footer-container">          
+            <div class="footer-bottom">
+                <p>&copy; 2026 TBZ Car Rental. All Rights Reserved.</p>
+            </div>
+
+        </footer>
+
+        <div class="modal-overlay" id="admin-modal">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <h2 id="modal-title">Action</h2>
+                    <button class="close-modal" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Dynamic form injected by JS goes here -->
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+    <script src="script_new.js"></script>
+</html>

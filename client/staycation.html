@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>TBZ Staycation</title>
+        <link rel="stylesheet" href="style_staycation.css">
+        <script src="https://kit.fontawesome.com/91d1ad08da.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--NAVIGATION BAR-->
+
+        <nav class="navigation-bar">
+            <img src="../img/TBZ_Logo_Rev2.0 Clear.png" alt="TBZ Logo" class="img-logo">
+            <ul class="navlinks">
+                <li><a href="../client/index.html" class="active">Home</a></li>
+                <li><a href="../client/showroom.html">Cars</a></li>
+                <li><a href="../client/staycation.html">Staycation</a></li>
+                <li><a href="../client/index.html#contact-title">Contact</a></li>
+                <li><a href="../client/about.html">About Us</a></li>
+            </ul>
+            <div class="navigation-bar-login-container">
+                <li><a href="../client/login.html" class="login-link">Login</a></li>
+            </div>
+        </nav>
+
+        <!--MAIN Container-->
+
+        <div class="booking-container">
+            
+            <div class="header-section">
+                <h1>TBZ Staycation</h1>
+                <p>Ortigas Extension, Brgy. Rosario, Pasig City</p>
+            </div>
+
+            <div class="content-grid">
+
+                <div class="grid-img">
+                    
+                    <img id="main-img" class="main-img" src="../img/staycation/DSC04537.JPG" alt="Living Room">
+                    
+                    <div class="thumbs-row">
+                        <img src="../img/staycation/DSC04537.JPG" class="thumbnail active" onclick="swapStayImage(this)">
+                        <img src="../img/staycation/DSC04560.JPG" class="thumbnail" onclick="swapStayImage(this)">
+                        <img src="../img/staycation/DSC04576.JPG" class="thumbnail" onclick="swapStayImage(this)">
+                        <img src="../img/staycation/DSC04595.JPG" class="thumbnail" onclick="swapStayImage(this)">
+                        <img src="../img/staycation/DSC04605.JPG" class="thumbnail" onclick="swapStayImage(this)">
+                        <img src="../img/staycation/DSC04612.JPG" class="thumbnail" onclick="swapStayImage(this)">
+                        <img src="../img/staycation/DSC04621.JPG" class="thumbnail" onclick="swapStayImage(this)">
+                        <img src="../img/staycation/DSC04629.JPG" class="thumbnail" onclick="swapStayImage(this)">
+                        <img src="../img/staycation/DSC04635.JPG" class="thumbnail" onclick="swapStayImage(this)">
+                    </div>
+
+                    <h2 class="section-title">About This</h2>
+                    <p style="color: #475569; line-height: 1.7; margin-bottom: 40px;">
+                    Experience ultimate comfort in the heart of Urdaneta City. Our fully-furnished executive suite is perfect for couples, solo travelers, or business trips. Enjoy breathtaking city views, high-end appliances, and access to premium building amenities including a rooftop infinity pool and a fully equipped gym. </p>
+            
+                    <h2 class="section-title">Amenities</h2>
+                    <div class="amenities-grid">
+                        <div class="amenity-item"><div class="amenity-icon">📶</div> Fast Wi-Fi (100Mbps)</div>
+                        <div class="amenity-item"><div class="amenity-icon">🏊</div> Infinity Pool</div>
+                        <div class="amenity-item"><div class="amenity-icon">🍳</div> Full Kitchen</div>
+                        <div class="amenity-item"><div class="amenity-icon">📺</div> 55" Smart TV w/ Netflix</div>
+                        <div class="amenity-item"><div class="amenity-icon">❄️</div> Air Conditioning</div>
+                        <div class="amenity-item"><div class="amenity-icon">🚗</div> Free Secure Parking</div>
+                    </div>
+                
+                </div>
+
+                <div class="right-content">
+                    <div class="booking-card">
+                        <p class="price">Php 1,800<span> / night</span></p>
+
+                        <div class="input-group">
+                            <label for="check-in">Check-In</label>
+                            <input type="date" id="check-in" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="check-out">Check-Out</label>
+                            <input type="date" id="check-out" required>
+                        </div>
+
+                        <div class="input">
+                            <label for="guests">Guests</label>
+                            <select id="guests">
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6 Guests (MAX)</option>
+                            </select>
+                        </div>
+
+                        <button class="book-btn">Reserve Now</button>
+                        <p style="text-align: center; font-size: 0.85rem; color: #94a3b8; margin-top: 15px;">You won't be charged yet</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <!--FOOTER CONTAINER-->
+
+        <footer class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img class="footer-logo" src="../img/TBZ_Logo_Short Cropped.png" alt="TBZ Logo Short">
+                    <p>TBZ Car Rental On the Go!</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Vehicle Lease Agreement</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Staycation</a></li>
+                        </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Payment Method</h3>
+                        <div class="payment-method-img">
+                                                                                       <!--TODO: CHANGE .PNG TO FONTAWSOME-->
+                            <img src="../img/お金.png" alt="Cash Image">
+                            <img src="../img/gcash.png" alt="GCash Image">
+                            <img src="../img/mobile-banking.png" alt="Bank Image">
+                        </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Follow Us on Facebook!</h3>
+                    <a href="https://www.facebook.com/tbz.car.rental" target="_blank" class="social-link">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </div>
+            </div>
+           
+            <div class="footer-bottom">
+                <p>&copy; 2026 TBZ Car Rental. All Rights Reserved.</p>
+            </div>
+
+        </footer>
+
+
+    </body>
+    <script src="../client/script_staycation.js"></script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>TBZ Car Rental Admin Panel</title>
+        <link rel="stylesheet" href="style_admin.css">
+    </head>
+    <body>
+        <div class="title">TBZ Car Rental Dashboard</div>
+        <h1>Add a new car</h1>
+        <form id="add-car-form">
+            <input type="text" id="model" placeholder="Car Model" required><br><br>
+            <input type="number" id="year" placeholder="Model Year" required><br><br>
+            <input type="text" id="plate_number" placeholder="Plate Number" required><br><br>
+            <input type="text" id="gas_type" placeholder="e.g., Unleaded" required><br><br>
+            <input type="number" id="rate" placeholder="Daily rate (Php)" required><br><br>
+
+            <label>Self Drive or With Driver?
+                <select id="driver_boolean">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select><br><br>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+        <h3 id="status_text">Status</h3>
+        <a href="index.html">Back to Showroom</a>
+    </body>
+    <script src="script_admin.js"></script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Sign In to TBZ Car Rental</title>
+        <link rel="stylesheet" href="style_login.css">
+        <script src="https://kit.fontawesome.com/91d1ad08da.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!---MAIN CONTAIENR-->
+        
+        <div class="main-container">
+            <div class="wizard-container">
+                
+                <div class="wizard-header">
+                    <h1>Welcome Back!</h1>
+                    <p>Log In to your Account</p>
+                </div>
+
+
+                <form id="login-form">
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="••••••••" minlength="8" required>
+                    </div>
+
+                    <div class="forgot-password">
+                        <a href="../client/forgot.html">Forgot Password?</a>
+                    </div>
+
+                    <div class="btn-group">
+                        <div class="signup-prompt">
+                            <h3>Don't have an account?</h3>
+                            <a href="../client/create.html">Sign Up</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btn-login">Log In</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        
+        
+        <!--FOOTER CONTAINER-->
+
+        <footer class="footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 TBZ Car Rental. All Rights Reserved.</p>
+            </div>
+
+        </footer>
+
+
+    </body>
+    <script src="script_login.js"></script>
+</html>
